@@ -1,0 +1,418 @@
+/* ============================================
+   COLLECTIONS.CSS — Collections page styles
+   ============================================ */
+
+
+/* ── PAGE HERO ── */
+
+.page-hero {
+  position: relative;
+  background: linear-gradient(135deg, var(--clr-cream) 0%, var(--clr-linen) 100%);
+  padding: 6rem 2rem 5rem;
+  text-align: center;
+  overflow: hidden;
+  border-bottom: 1px solid rgba(184,147,62,0.15);
+}
+
+.page-hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.page-hero-content .section-title {
+  font-size: clamp(2.5rem, 5vw, 4rem);
+}
+
+.page-hero-content p {
+  font-family: var(--font-body);
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: var(--clr-clay);
+  max-width: 480px;
+  margin: 1rem auto 0;
+}
+
+.page-hero-content .divider { margin: 1.25rem auto; }
+
+/* Floating orbs background */
+.page-hero-orbs { position: absolute; inset: 0; pointer-events: none; }
+
+.orb {
+  position: absolute;
+  border-radius: 50%;
+  opacity: 0.12;
+}
+
+.orb--1 {
+  width: 350px; height: 350px;
+  background: radial-gradient(circle, var(--clr-gold) 0%, transparent 70%);
+  top: -100px; right: -80px;
+  animation: orbFloat 12s ease-in-out infinite;
+}
+
+.orb--2 {
+  width: 200px; height: 200px;
+  background: radial-gradient(circle, var(--clr-clay) 0%, transparent 70%);
+  bottom: -50px; left: 10%;
+  animation: orbFloat 16s ease-in-out infinite reverse;
+}
+
+.orb--3 {
+  width: 120px; height: 120px;
+  background: radial-gradient(circle, var(--clr-sage) 0%, transparent 70%);
+  top: 40%; left: 5%;
+  animation: orbFloat 10s ease-in-out infinite;
+}
+
+@keyframes orbFloat {
+  0%, 100% { transform: translateY(0) scale(1); }
+  50%       { transform: translateY(-20px) scale(1.05); }
+}
+
+
+/* ── FILTER BAR ── */
+
+.filter-bar {
+  position: sticky;
+  top: var(--header-h);
+  z-index: 50;
+  background: rgba(250,246,240,0.95);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(184,147,62,0.15);
+  padding: 0.85rem 0;
+}
+
+.filter-tabs {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.filter-tab {
+  font-family: var(--font-ui);
+  font-size: 0.72rem;
+  font-weight: 400;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  padding: 0.55rem 1.4rem;
+  border: 1px solid rgba(184,147,62,0.3);
+  background: transparent;
+  color: var(--clr-clay);
+  cursor: pointer;
+  transition: all var(--transition);
+}
+
+.filter-tab:hover {
+  background: var(--clr-cream);
+  color: var(--clr-bark);
+}
+
+.filter-tab.active {
+  background: var(--clr-bark);
+  color: var(--clr-cream);
+  border-color: var(--clr-bark);
+}
+
+
+/* ── COLLECTION SECTION ── */
+
+.collection-section {
+  padding: 6rem 0;
+  background: var(--clr-linen);
+}
+
+.collection-section--alt {
+  background: var(--clr-cream);
+}
+
+.coll-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 2rem;
+  margin-bottom: 3.5rem;
+  flex-wrap: wrap;
+}
+
+.coll-header-text p {
+  font-family: var(--font-body);
+  font-size: 1.05rem;
+  line-height: 1.8;
+  color: var(--clr-clay);
+  max-width: 520px;
+  margin-top: 1rem;
+}
+
+/* Badge on right side of header */
+.coll-bulk-badge {
+  flex-shrink: 0;
+  width: 120px; height: 120px;
+  border-radius: 50%;
+  background: var(--clr-bark);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  box-shadow: var(--shadow-md);
+  padding: 1rem;
+}
+
+.bulk-num {
+  font-family: var(--font-display);
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: var(--clr-gold-lt);
+  line-height: 1;
+}
+
+.bulk-text {
+  font-family: var(--font-ui);
+  font-size: 0.55rem;
+  font-weight: 400;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--clr-sand);
+  margin-top: 4px;
+  line-height: 1.4;
+}
+
+
+/* ── JEWELRY GRID ── */
+
+.jewelry-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+  margin-bottom: 3rem;
+}
+
+.jewelry-card {
+  background: var(--clr-linen);
+  border: 1px solid rgba(184,147,62,0.1);
+  overflow: hidden;
+  transition: transform var(--transition), box-shadow var(--transition);
+}
+
+.collection-section--alt .jewelry-card {
+  background: var(--clr-linen);
+}
+
+.jewelry-card:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-md);
+}
+
+/* Image placeholder with gradient art */
+.jewelry-img {
+  height: 220px;
+  position: relative;
+  overflow: hidden;
+}
+
+.jewelry-img::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+}
+
+.jimg--1  { background: linear-gradient(135deg, #3d2e1e 0%, #6b4e35 50%, #8b7050 100%); }
+.jimg--2  { background: linear-gradient(135deg, #2c2010 0%, #5a4020 50%, #7a6040 100%); }
+.jimg--3  { background: linear-gradient(135deg, #3a3020 0%, #6a5030 50%, #9a7050 100%); }
+.jimg--4  { background: linear-gradient(135deg, #2e2820 0%, #5c4830 50%, #7c6848 100%); }
+.jimg--5  { background: linear-gradient(135deg, #1e2820 0%, #2e4830 50%, #4e7850 100%); }
+.jimg--6  { background: linear-gradient(135deg, #1a2818 0%, #2a3828 50%, #3a5838 100%); }
+.jimg--7  { background: linear-gradient(135deg, #283018 0%, #385020 50%, #487030 100%); }
+.jimg--8  { background: linear-gradient(135deg, #203018 0%, #384820 50%, #506030 100%); }
+.jimg--9  { background: linear-gradient(135deg, #302010 0%, #604020 50%, #907040 100%); }
+.jimg--10 { background: linear-gradient(135deg, #281808 0%, #503015 50%, #785030 100%); }
+.jimg--11 { background: linear-gradient(135deg, #302818 0%, #584020 50%, #806838 100%); }
+.jimg--12 { background: linear-gradient(135deg, #382010 0%, #683818 50%, #985030 100%); }
+
+/* Decorative jewelry shape overlay */
+.jewelry-img::after {
+  content: '◈';
+  position: absolute;
+  top: 50%; left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 4rem;
+  color: rgba(255,255,255,0.1);
+  z-index: 1;
+}
+
+.material-tag {
+  position: absolute;
+  bottom: 0.75rem; left: 0.75rem;
+  z-index: 3;
+  font-family: var(--font-ui);
+  font-size: 0.58rem;
+  font-weight: 400;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--clr-gold-lt);
+  background: rgba(0,0,0,0.45);
+  padding: 0.25rem 0.6rem;
+  backdrop-filter: blur(4px);
+}
+
+.jewelry-overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 4;
+  background: rgba(44,36,22,0.55);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity var(--transition);
+  backdrop-filter: blur(3px);
+}
+
+.jewelry-card:hover .jewelry-overlay { opacity: 1; }
+
+.jewelry-body {
+  padding: 1.25rem 1.25rem 1.5rem;
+}
+
+.jewelry-cat {
+  font-family: var(--font-ui);
+  font-size: 0.6rem;
+  font-weight: 400;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--clr-gold);
+  display: block;
+  margin-bottom: 0.35rem;
+}
+
+.jewelry-name {
+  font-family: var(--font-display);
+  font-size: 1.1rem;
+  font-weight: 400;
+  color: var(--clr-bark);
+  margin-bottom: 0.6rem;
+  line-height: 1.3;
+}
+
+.jewelry-desc {
+  font-family: var(--font-body);
+  font-size: 0.9rem;
+  line-height: 1.65;
+  color: var(--clr-clay);
+  margin-bottom: 1rem;
+}
+
+.jewelry-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.jewelry-price {
+  font-family: var(--font-ui);
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--clr-bark);
+  letter-spacing: 0.05em;
+}
+
+
+/* ── BULK CTA ── */
+
+.bulk-cta {
+  background: var(--clr-stone);
+  padding: 2.5rem 2.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.bulk-cta-text h3 {
+  font-family: var(--font-display);
+  font-size: 1.4rem;
+  font-weight: 400;
+  color: var(--clr-cream);
+  margin-bottom: 0.4rem;
+}
+
+.bulk-cta-text p {
+  font-family: var(--font-body);
+  font-size: 1rem;
+  color: var(--clr-sand);
+}
+
+
+/* ── MATERIALS BAR ── */
+
+.materials-bar {
+  background: var(--clr-cream);
+  border-top: 1px solid rgba(184,147,62,0.2);
+  padding: 4rem 0;
+}
+
+.materials-row {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.mat-item {
+  text-align: center;
+  padding: 2rem 1rem;
+  border: 1px solid rgba(184,147,62,0.15);
+  background: var(--clr-linen);
+  transition: box-shadow var(--transition);
+}
+
+.mat-item:hover { box-shadow: var(--shadow-sm); }
+
+.mat-icon {
+  display: block;
+  font-size: 1.5rem;
+  color: var(--clr-gold);
+  margin-bottom: 0.75rem;
+}
+
+.mat-name {
+  display: block;
+  font-family: var(--font-display);
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--clr-bark);
+  margin-bottom: 0.3rem;
+}
+
+.mat-desc {
+  display: block;
+  font-family: var(--font-ui);
+  font-size: 0.68rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--clr-clay);
+}
+
+
+/* ── RESPONSIVE ── */
+
+@media (max-width: 1024px) {
+  .jewelry-grid { grid-template-columns: repeat(2, 1fr); }
+  .materials-row { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 640px) {
+  .jewelry-grid { grid-template-columns: 1fr; }
+  .coll-header { flex-direction: column; }
+  .coll-bulk-badge { width: 100px; height: 100px; }
+  .materials-row { grid-template-columns: 1fr 1fr; }
+  .filter-tabs { gap: 0.4rem; }
+  .filter-tab { padding: 0.5rem 1rem; }
+  .bulk-cta { flex-direction: column; text-align: center; }
+}
