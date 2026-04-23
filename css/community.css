@@ -696,3 +696,75 @@
   .events-signup-actions { justify-content: center; }
   .section-nav-links a { padding: 0.85rem 1rem; }
 }
+/* ── MSU COLOR OVERRIDES ── */
+.comm-hero { background: var(--clr-navy-dark); }
+.comm-hero-content .section-title { color: #ffffff; }
+.comm-hero-content .section-title em { color: var(--clr-gold-lt); }
+.comm-hero-content .section-label { color: var(--clr-gold); }
+.comm-hero-content p { color: rgba(255,255,255,0.8); }
+.comm-hero-content .divider { background: var(--clr-gold); }
+
+.section-nav { background: rgba(250,248,242,0.97); }
+.section-nav-links a { color: var(--clr-clay); }
+.section-nav-links a:hover { color: var(--clr-navy); border-bottom-color: var(--clr-gold); }
+
+.perk-icon { color: var(--clr-gold); }
+.perk-row strong { color: var(--clr-navy); }
+
+.greek-card { background: var(--clr-navy-dark); color: #ffffff; }
+.greek-card-top { border-bottom-color: rgba(196,161,53,0.25); }
+.greek-card-top h3 { color: #ffffff; }
+.greek-omega { color: var(--clr-gold-lt); }
+.tier { border-left-color: rgba(196,161,53,0.3); }
+.tier--mid { border-left-color: var(--clr-gold); background: rgba(196,161,53,0.08); }
+.tier--top { border-left-color: var(--clr-gold-lt); background: rgba(196,161,53,0.15); }
+.tier-label { color: rgba(255,255,255,0.75); }
+.tier-qty { color: rgba(255,255,255,0.7); }
+.tier-disc { color: var(--clr-gold-lt); }
+.greek-card-note { color: rgba(255,255,255,0.5); }
+
+.comm-section--dark { background: var(--clr-navy-dark); }
+.sust-header .section-label { color: var(--clr-gold-lt); }
+.sust-header h2 { color: #ffffff !important; }
+.sust-header p { color: rgba(255,255,255,0.75); }
+.process-step { background: rgba(255,255,255,0.04); border-color: rgba(196,161,53,0.18); }
+.process-step:hover { background: rgba(196,161,53,0.07); }
+.step-num { color: rgba(196,161,53,0.3); }
+.step-title { color: #ffffff; }
+.step-desc { color: rgba(255,255,255,0.7); }
+.process-arrow { color: var(--clr-gold); }
+.sust-stat { background: rgba(255,255,255,0.04); border-color: rgba(196,161,53,0.18); }
+.sust-num { color: var(--clr-gold-lt); }
+.sust-label { color: rgba(255,255,255,0.6); }
+
+.event-card { background: var(--clr-cream); border-color: rgba(0,51,102,0.12); }
+.event-card.upcoming { border-color: rgba(196,161,53,0.45); background: var(--clr-linen); }
+.event-date { color: var(--clr-navy); }
+.event-badge { background: var(--clr-gold); color: var(--clr-navy); }
+.event-badge--alumni { background: var(--clr-mountain); color: #ffffff; }
+.event-name { color: var(--clr-navy); }
+.event-detail { color: var(--clr-clay); }
+.event-desc { color: var(--clr-clay); }
+.events-signup { background: var(--clr-navy-dark); }
+.events-signup-text h3 { color: #ffffff; }
+.events-signup-text p { color: rgba(255,255,255,0.7); }
+.events-signup-actions .btn-outline { color: rgba(255,255,255,0.8); border-color: rgba(255,255,255,0.3); }
+.events-signup-actions .btn-outline:hover { background: #ffffff; color: var(--clr-navy); }
+
+.story-quote { background: var(--clr-linen); border-color: rgba(196,161,53,0.25); }
+.quote-mark { color: rgba(196,161,53,0.25); }
+.story-quote p { color: var(--clr-navy); }
+.quote-author { color: var(--clr-gold); }
+
+.contact-form-wrap { background: var(--clr-cream); border-color: rgba(0,51,102,0.15); }
+.form-group label { color: var(--clr-clay); }
+.form-group input, .form-group select, .form-group textarea {
+  background: var(--clr-linen);
+  border-color: rgba(0,51,102,0.2);
+  color: var(--clr-navy-dark);
+}
+.form-group input:focus, .form-group select:focus, .form-group textarea:focus {
+  border-color: var(--clr-gold);
+  box-shadow: 0 0 0 2px rgba(196,161,53,0.15);
+}
+.contact-label { color: var(--clr-gold); }
