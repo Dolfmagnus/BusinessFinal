@@ -112,6 +112,10 @@ ul { list-style: none; }
   color: var(--clr-gold-lt);
 }
 
+.logo-sub {
+  margin-top: 5px;
+}
+
 .site-nav { display: flex; align-items: center; gap: 2.5rem; }
 
 .site-nav a {
