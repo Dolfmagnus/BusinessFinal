@@ -219,18 +219,18 @@
   z-index: 1;
 }
 
-.jimg--1  { background: linear-gradient(135deg, #3d2e1e 0%, #6b4e35 50%, #8b7050 100%); }
-.jimg--2  { background: linear-gradient(135deg, #2c2010 0%, #5a4020 50%, #7a6040 100%); }
-.jimg--3  { background: linear-gradient(135deg, #3a3020 0%, #6a5030 50%, #9a7050 100%); }
-.jimg--4  { background: linear-gradient(135deg, #2e2820 0%, #5c4830 50%, #7c6848 100%); }
-.jimg--5  { background: linear-gradient(135deg, #1e2820 0%, #2e4830 50%, #4e7850 100%); }
-.jimg--6  { background: linear-gradient(135deg, #1a2818 0%, #2a3828 50%, #3a5838 100%); }
-.jimg--7  { background: linear-gradient(135deg, #283018 0%, #385020 50%, #487030 100%); }
-.jimg--8  { background: linear-gradient(135deg, #203018 0%, #384820 50%, #506030 100%); }
-.jimg--9  { background: linear-gradient(135deg, #302010 0%, #604020 50%, #907040 100%); }
-.jimg--10 { background: linear-gradient(135deg, #281808 0%, #503015 50%, #785030 100%); }
-.jimg--11 { background: linear-gradient(135deg, #302818 0%, #584020 50%, #806838 100%); }
-.jimg--12 { background: linear-gradient(135deg, #382010 0%, #683818 50%, #985030 100%); }
+.jimg--1  { background: linear-gradient(135deg, #001f40 0%, #003366 50%, #004080 100%); }
+.jimg--2  { background: linear-gradient(135deg, #001828 0%, #002a4a 50%, #003a5c 100%); }
+.jimg--3  { background: linear-gradient(135deg, #00203a 0%, #002f55 50%, #004070 100%); }
+.jimg--4  { background: linear-gradient(135deg, #001a35 0%, #002a48 50%, #003a58 100%); }
+.jimg--5  { background: linear-gradient(135deg, #001a30 0%, #00284a 50%, #003d45 100%); }
+.jimg--6  { background: linear-gradient(135deg, #001520 0%, #001e30 50%, #002840 100%); }
+.jimg--7  { background: linear-gradient(135deg, #001520 0%, #002040 50%, #003050 100%); }
+.jimg--8  { background: linear-gradient(135deg, #001030 0%, #002040 50%, #003050 100%); }
+.jimg--9  { background: linear-gradient(135deg, #1a0a00 0%, #003060 50%, #c4a135 100%); }
+.jimg--10 { background: linear-gradient(135deg, #001020 0%, #002050 50%, #003060 100%); }
+.jimg--11 { background: linear-gradient(135deg, #001030 0%, #002848 50%, #c4a135 100%); }
+.jimg--12 { background: linear-gradient(135deg, #001030 0%, #002848 50%, #003060 100%); }
 
 /* Decorative jewelry shape overlay */
 .jewelry-img::after {
@@ -416,3 +416,51 @@
   .filter-tab { padding: 0.5rem 1rem; }
   .bulk-cta { flex-direction: column; text-align: center; }
 }
+/* ── MSU COLOR OVERRIDES ── */
+
+.page-hero {
+  background: linear-gradient(135deg, var(--clr-cream) 0%, var(--clr-linen) 100%);
+  border-bottom: 2px solid rgba(196,161,53,0.2);
+}
+
+.orb--1 { background: radial-gradient(circle, var(--clr-gold) 0%, transparent 70%); }
+.orb--2 { background: radial-gradient(circle, var(--clr-navy) 0%, transparent 70%); }
+.orb--3 { background: radial-gradient(circle, var(--clr-mountain) 0%, transparent 70%); }
+
+.filter-tab { color: var(--clr-navy); border-color: rgba(0,51,102,0.25); }
+.filter-tab:hover { background: var(--clr-cream); color: var(--clr-navy); }
+.filter-tab.active { background: var(--clr-navy); color: #ffffff; border-color: var(--clr-navy); }
+
+.jewelry-card { border-color: rgba(0,51,102,0.1); background: var(--clr-linen); }
+.jewelry-cat { color: var(--clr-gold); }
+.jewelry-name { color: var(--clr-navy); }
+.jewelry-desc { color: var(--clr-clay); }
+.jewelry-price { color: var(--clr-navy); }
+.material-tag { color: var(--clr-gold-lt); }
+
+/* Override jewelry image gradients with MSU navy/gold */
+.jimg--1  { background: linear-gradient(135deg, #001f40 0%, #003366 50%, #004080 100%); }
+.jimg--2  { background: linear-gradient(135deg, #001828 0%, #002a4a 50%, #003a5c 100%); }
+.jimg--3  { background: linear-gradient(135deg, #001f40 0%, #c4a135 80%, #d9bc6a 100%); }
+.jimg--4  { background: linear-gradient(135deg, #001030 0%, #003060 50%, #004880 100%); }
+.jimg--5  { background: linear-gradient(135deg, #001520 0%, #003366 50%, #004a6e 100%); }
+.jimg--6  { background: linear-gradient(135deg, #001e30 0%, #002f55 50%, #003d6a 100%); }
+.jimg--7  { background: linear-gradient(135deg, #001530 0%, #003050 50%, #c4a135 100%); }
+.jimg--8  { background: linear-gradient(135deg, #001030 0%, #002040 50%, #003050 100%); }
+.jimg--9  { background: linear-gradient(135deg, #1a0a00 0%, #c4a135 50%, #d9bc6a 100%); }
+.jimg--10 { background: linear-gradient(135deg, #001020 0%, #003060 50%, #004878 100%); }
+.jimg--11 { background: linear-gradient(135deg, #001030 0%, #003060 50%, #c4a135 100%); }
+.jimg--12 { background: linear-gradient(135deg, #001030 0%, #003060 50%, #d9bc6a 100%); }
+
+.bulk-cta { background: var(--clr-navy-dark); }
+.bulk-cta-text h3 { color: #ffffff; }
+.bulk-cta-text p { color: var(--clr-silver); }
+
+.coll-bulk-badge { background: var(--clr-navy); }
+.bulk-num { color: var(--clr-gold-lt); }
+.bulk-text { color: rgba(255,255,255,0.75); }
+
+.mat-item { border-color: rgba(0,51,102,0.12); background: var(--clr-linen); }
+.mat-icon { color: var(--clr-gold); }
+.mat-name { color: var(--clr-navy); }
+.mat-desc { color: var(--clr-clay); }
